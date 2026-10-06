@@ -16,3 +16,12 @@ Ansible role that stows the `bashrc` package from the personal dotfiles reposito
   roles:
     - role: bashrc
 ```
+
+## Manual setup (without Ansible)
+
+```
+sudo apt install stow git
+git clone https://github.com/Varssos/dotfiles.git ~/dotfiles
+cd ~/dotfiles && stow -R bashrc
+echo 'source ~/.my_bashrc' >> ~/.bashrc
+```
